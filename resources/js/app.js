@@ -5,6 +5,7 @@ import { createApp, h } from "vue";
 import { createInertiaApp } from "@inertiajs/inertia-vue3";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy/dist/vue.m";
+import { InertiaProgress } from "@inertiajs/progress";
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -20,3 +21,5 @@ createInertiaApp({
             .mount(el);
     },
 });
+
+InertiaProgress.init({ color: "#000000", showSpinner: true });

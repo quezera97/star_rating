@@ -25,8 +25,9 @@ defineProps({
                 <div class="flex flex-col text-left justify-between pl-3 space-y-5">
                     <h3 class="text-xl font-semibold text-indigo-600 hover:text-indigo-800">
                         <!-- <Link :href="'/posts/' + article.id"> from this change to below  -->
-                        <Link :href="route('article.show', article.id)">
-                            {{ article.title}}
+                        <!-- preserve-scrool to stay the scrolled windiws back and forth -->
+                        <Link :href="route('article.show', article.id)" preserve-scroll>
+                            {{ article.title }}
                         </Link>
                     </h3>
                     <p>
