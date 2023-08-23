@@ -9,11 +9,14 @@ defineProps({
 
 <template>
     <KinstaLayout>
-        <Link href="/logout" method="post" as="button" type="button">Logout</Link>
         <section class="space-y-5 border-b-2 pb-10">
             <h2 class="text-2xl font-bold pt-10 mx-auto text-center">
                 Read our latest articles
             </h2>
+
+            <Link :href="route('ratings.index')" preserve-scroll>
+                KE Rating
+            </Link>
 
             <article
                 v-for="article in articles"

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RatingController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -15,4 +16,6 @@ Route::get('/posts/{article:id}', function (Article $article) {
         'article' => $article
     ]);
 })->name('article.show');
+
+Route::resource('ratings', RatingController::class);
 
